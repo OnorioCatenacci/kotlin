@@ -11033,6 +11033,8 @@ public class JetDiagnosticsTestGenerated extends AbstractJetDiagnosticsTest {
                 SmartCasts.Loops.class,
                 SmartCasts.PublicVals.class,
                 SmartCasts.Safecalls.class,
+                SmartCasts.Variables.class,
+                SmartCasts.Varnotnull.class,
         })
         @RunWith(JUnit3RunnerWithInners.class)
         public static class SmartCasts extends AbstractJetDiagnosticsTest {
@@ -11546,6 +11548,180 @@ public class JetDiagnosticsTestGenerated extends AbstractJetDiagnosticsTest {
                 @TestMetadata("twoArgs.kt")
                 public void testTwoArgs() throws Exception {
                     String fileName = JetTestUtils.navigationMetadata("compiler/testData/diagnostics/tests/smartCasts/safecalls/twoArgs.kt");
+                    doTest(fileName);
+                }
+            }
+
+            @TestMetadata("compiler/testData/diagnostics/tests/smartCasts/variables")
+            @TestDataPath("$PROJECT_ROOT")
+            @RunWith(JUnit3RunnerWithInners.class)
+            public static class Variables extends AbstractJetDiagnosticsTest {
+                public void testAllFilesPresentInVariables() throws Exception {
+                    JetTestUtils.assertAllTestsPresentByMetadata(this.getClass(), new File("compiler/testData/diagnostics/tests/smartCasts/variables"), Pattern.compile("^(.+)\\.kt$"), true);
+                }
+
+                @TestMetadata("assignment.kt")
+                public void testAssignment() throws Exception {
+                    String fileName = JetTestUtils.navigationMetadata("compiler/testData/diagnostics/tests/smartCasts/variables/assignment.kt");
+                    doTest(fileName);
+                }
+
+                @TestMetadata("ifVarIs.kt")
+                public void testIfVarIs() throws Exception {
+                    String fileName = JetTestUtils.navigationMetadata("compiler/testData/diagnostics/tests/smartCasts/variables/ifVarIs.kt");
+                    doTest(fileName);
+                }
+
+                @TestMetadata("ifVarIsAnd.kt")
+                public void testIfVarIsAnd() throws Exception {
+                    String fileName = JetTestUtils.navigationMetadata("compiler/testData/diagnostics/tests/smartCasts/variables/ifVarIsAnd.kt");
+                    doTest(fileName);
+                }
+
+                @TestMetadata("ifVarIsChanged.kt")
+                public void testIfVarIsChanged() throws Exception {
+                    String fileName = JetTestUtils.navigationMetadata("compiler/testData/diagnostics/tests/smartCasts/variables/ifVarIsChanged.kt");
+                    doTest(fileName);
+                }
+
+                @TestMetadata("infix.kt")
+                public void testInfix() throws Exception {
+                    String fileName = JetTestUtils.navigationMetadata("compiler/testData/diagnostics/tests/smartCasts/variables/infix.kt");
+                    doTest(fileName);
+                }
+
+                @TestMetadata("initialization.kt")
+                public void testInitialization() throws Exception {
+                    String fileName = JetTestUtils.navigationMetadata("compiler/testData/diagnostics/tests/smartCasts/variables/initialization.kt");
+                    doTest(fileName);
+                }
+
+                @TestMetadata("varAsUse.kt")
+                public void testVarAsUse() throws Exception {
+                    String fileName = JetTestUtils.navigationMetadata("compiler/testData/diagnostics/tests/smartCasts/variables/varAsUse.kt");
+                    doTest(fileName);
+                }
+
+                @TestMetadata("varChangedInLoop.kt")
+                public void testVarChangedInLoop() throws Exception {
+                    String fileName = JetTestUtils.navigationMetadata("compiler/testData/diagnostics/tests/smartCasts/variables/varChangedInLoop.kt");
+                    doTest(fileName);
+                }
+
+                @TestMetadata("varNotChangedInLoop.kt")
+                public void testVarNotChangedInLoop() throws Exception {
+                    String fileName = JetTestUtils.navigationMetadata("compiler/testData/diagnostics/tests/smartCasts/variables/varNotChangedInLoop.kt");
+                    doTest(fileName);
+                }
+            }
+
+            @TestMetadata("compiler/testData/diagnostics/tests/smartCasts/varnotnull")
+            @TestDataPath("$PROJECT_ROOT")
+            @RunWith(JUnit3RunnerWithInners.class)
+            public static class Varnotnull extends AbstractJetDiagnosticsTest {
+                public void testAllFilesPresentInVarnotnull() throws Exception {
+                    JetTestUtils.assertAllTestsPresentByMetadata(this.getClass(), new File("compiler/testData/diagnostics/tests/smartCasts/varnotnull"), Pattern.compile("^(.+)\\.kt$"), true);
+                }
+
+                @TestMetadata("assignment.kt")
+                public void testAssignment() throws Exception {
+                    String fileName = JetTestUtils.navigationMetadata("compiler/testData/diagnostics/tests/smartCasts/varnotnull/assignment.kt");
+                    doTest(fileName);
+                }
+
+                @TestMetadata("ifVarNotNull.kt")
+                public void testIfVarNotNull() throws Exception {
+                    String fileName = JetTestUtils.navigationMetadata("compiler/testData/diagnostics/tests/smartCasts/varnotnull/ifVarNotNull.kt");
+                    doTest(fileName);
+                }
+
+                @TestMetadata("ifVarNotNullAnd.kt")
+                public void testIfVarNotNullAnd() throws Exception {
+                    String fileName = JetTestUtils.navigationMetadata("compiler/testData/diagnostics/tests/smartCasts/varnotnull/ifVarNotNullAnd.kt");
+                    doTest(fileName);
+                }
+
+                @TestMetadata("ifVarNullElse.kt")
+                public void testIfVarNullElse() throws Exception {
+                    String fileName = JetTestUtils.navigationMetadata("compiler/testData/diagnostics/tests/smartCasts/varnotnull/ifVarNullElse.kt");
+                    doTest(fileName);
+                }
+
+                @TestMetadata("ifVarNullReturn.kt")
+                public void testIfVarNullReturn() throws Exception {
+                    String fileName = JetTestUtils.navigationMetadata("compiler/testData/diagnostics/tests/smartCasts/varnotnull/ifVarNullReturn.kt");
+                    doTest(fileName);
+                }
+
+                @TestMetadata("inference.kt")
+                public void testInference() throws Exception {
+                    String fileName = JetTestUtils.navigationMetadata("compiler/testData/diagnostics/tests/smartCasts/varnotnull/inference.kt");
+                    doTest(fileName);
+                }
+
+                @TestMetadata("infix.kt")
+                public void testInfix() throws Exception {
+                    String fileName = JetTestUtils.navigationMetadata("compiler/testData/diagnostics/tests/smartCasts/varnotnull/infix.kt");
+                    doTest(fileName);
+                }
+
+                @TestMetadata("initialization.kt")
+                public void testInitialization() throws Exception {
+                    String fileName = JetTestUtils.navigationMetadata("compiler/testData/diagnostics/tests/smartCasts/varnotnull/initialization.kt");
+                    doTest(fileName);
+                }
+
+                @TestMetadata("iterations.kt")
+                public void testIterations() throws Exception {
+                    String fileName = JetTestUtils.navigationMetadata("compiler/testData/diagnostics/tests/smartCasts/varnotnull/iterations.kt");
+                    doTest(fileName);
+                }
+
+                @TestMetadata("unnecessary.kt")
+                public void testUnnecessary() throws Exception {
+                    String fileName = JetTestUtils.navigationMetadata("compiler/testData/diagnostics/tests/smartCasts/varnotnull/unnecessary.kt");
+                    doTest(fileName);
+                }
+
+                @TestMetadata("unnecessaryWithMap.kt")
+                public void testUnnecessaryWithMap() throws Exception {
+                    String fileName = JetTestUtils.navigationMetadata("compiler/testData/diagnostics/tests/smartCasts/varnotnull/unnecessaryWithMap.kt");
+                    doTest(fileName);
+                }
+
+                @TestMetadata("varCapturedInClosure.kt")
+                public void testVarCapturedInClosure() throws Exception {
+                    String fileName = JetTestUtils.navigationMetadata("compiler/testData/diagnostics/tests/smartCasts/varnotnull/varCapturedInClosure.kt");
+                    doTest(fileName);
+                }
+
+                @TestMetadata("varChangedInLoop.kt")
+                public void testVarChangedInLoop() throws Exception {
+                    String fileName = JetTestUtils.navigationMetadata("compiler/testData/diagnostics/tests/smartCasts/varnotnull/varChangedInLoop.kt");
+                    doTest(fileName);
+                }
+
+                @TestMetadata("varCheck.kt")
+                public void testVarCheck() throws Exception {
+                    String fileName = JetTestUtils.navigationMetadata("compiler/testData/diagnostics/tests/smartCasts/varnotnull/varCheck.kt");
+                    doTest(fileName);
+                }
+
+                @TestMetadata("varIntNull.kt")
+                public void testVarIntNull() throws Exception {
+                    String fileName = JetTestUtils.navigationMetadata("compiler/testData/diagnostics/tests/smartCasts/varnotnull/varIntNull.kt");
+                    doTest(fileName);
+                }
+
+                @TestMetadata("varNotChangedInLoop.kt")
+                public void testVarNotChangedInLoop() throws Exception {
+                    String fileName = JetTestUtils.navigationMetadata("compiler/testData/diagnostics/tests/smartCasts/varnotnull/varNotChangedInLoop.kt");
+                    doTest(fileName);
+                }
+
+                @TestMetadata("varNull.kt")
+                public void testVarNull() throws Exception {
+                    String fileName = JetTestUtils.navigationMetadata("compiler/testData/diagnostics/tests/smartCasts/varnotnull/varNull.kt");
                     doTest(fileName);
                 }
             }
