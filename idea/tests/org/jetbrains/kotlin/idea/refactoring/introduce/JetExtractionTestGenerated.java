@@ -2191,6 +2191,12 @@ public class JetExtractionTestGenerated extends AbstractJetExtractionTest {
             JetTestUtils.assertAllTestsPresentByMetadata(this.getClass(), new File("idea/testData/refactoring/introduceParameter"), Pattern.compile("^(.+)\\.kt$"), true);
         }
 
+        @TestMetadata("assignment.kt")
+        public void testAssignment() throws Exception {
+            String fileName = JetTestUtils.navigationMetadata("idea/testData/refactoring/introduceParameter/assignment.kt");
+            doIntroduceParameterTest(fileName);
+        }
+
         @TestMetadata("classInAnonymousInitializer.kt")
         public void testClassInAnonymousInitializer() throws Exception {
             String fileName = JetTestUtils.navigationMetadata("idea/testData/refactoring/introduceParameter/classInAnonymousInitializer.kt");
@@ -2275,6 +2281,12 @@ public class JetExtractionTestGenerated extends AbstractJetExtractionTest {
             doIntroduceParameterTest(fileName);
         }
 
+        @TestMetadata("fun.kt")
+        public void testFun() throws Exception {
+            String fileName = JetTestUtils.navigationMetadata("idea/testData/refactoring/introduceParameter/fun.kt");
+            doIntroduceParameterTest(fileName);
+        }
+
         @TestMetadata("functionMultipleUnusedParameters.kt")
         public void testFunctionMultipleUnusedParameters() throws Exception {
             String fileName = JetTestUtils.navigationMetadata("idea/testData/refactoring/introduceParameter/functionMultipleUnusedParameters.kt");
@@ -2317,15 +2329,33 @@ public class JetExtractionTestGenerated extends AbstractJetExtractionTest {
             doIntroduceParameterTest(fileName);
         }
 
+        @TestMetadata("localVar.kt")
+        public void testLocalVar() throws Exception {
+            String fileName = JetTestUtils.navigationMetadata("idea/testData/refactoring/introduceParameter/localVar.kt");
+            doIntroduceParameterTest(fileName);
+        }
+
         @TestMetadata("propertyAccessor.kt")
         public void testPropertyAccessor() throws Exception {
             String fileName = JetTestUtils.navigationMetadata("idea/testData/refactoring/introduceParameter/propertyAccessor.kt");
             doIntroduceParameterTest(fileName);
         }
 
+        @TestMetadata("return.kt")
+        public void testReturn() throws Exception {
+            String fileName = JetTestUtils.navigationMetadata("idea/testData/refactoring/introduceParameter/return.kt");
+            doIntroduceParameterTest(fileName);
+        }
+
         @TestMetadata("secondaryConstructorWithDefaultValue.kt")
         public void testSecondaryConstructorWithDefaultValue() throws Exception {
             String fileName = JetTestUtils.navigationMetadata("idea/testData/refactoring/introduceParameter/secondaryConstructorWithDefaultValue.kt");
+            doIntroduceParameterTest(fileName);
+        }
+
+        @TestMetadata("throw.kt")
+        public void testThrow() throws Exception {
+            String fileName = JetTestUtils.navigationMetadata("idea/testData/refactoring/introduceParameter/throw.kt");
             doIntroduceParameterTest(fileName);
         }
 
@@ -2338,6 +2368,12 @@ public class JetExtractionTestGenerated extends AbstractJetExtractionTest {
         @TestMetadata("valueAtCallSiteMultipleUsages.kt")
         public void testValueAtCallSiteMultipleUsages() throws Exception {
             String fileName = JetTestUtils.navigationMetadata("idea/testData/refactoring/introduceParameter/valueAtCallSiteMultipleUsages.kt");
+            doIntroduceParameterTest(fileName);
+        }
+
+        @TestMetadata("while.kt")
+        public void testWhile() throws Exception {
+            String fileName = JetTestUtils.navigationMetadata("idea/testData/refactoring/introduceParameter/while.kt");
             doIntroduceParameterTest(fileName);
         }
     }
